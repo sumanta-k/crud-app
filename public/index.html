@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Task Manager - CRUD App with Node.js & MongoDB</title>
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>Task Manager</h1>
+                <p>Node.js + Express + MongoDB CRUD Application</p>
+                <div class="status-bar">
+                    <div class="connection-status">
+                        <span class="status-dot" id="connectionDot"></span>
+                        <span id="connectionText">Connecting...</span>
+                    </div>
+                    <div id="taskStats">Loading...</div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2 style="margin-bottom: 20px; color: #333">Add New Task</h2>
+                <div id="formMessages"></div>
+                <form id="taskForm">
+                    <div class="form-group">
+                        <label for="title">Task Title *</label>
+                        <input
+                            type="text"
+                            id="title"
+                            required
+                            placeholder="Enter task title..."
+                            maxlength="200"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea
+                            id="description"
+                            placeholder="Enter task description..."
+                            maxlength="1000"
+                        ></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select id="status">
+                            <option value="pending">Pending</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn" id="createBtn">
+                        Create Task
+                    </button>
+                </form>
+            </div>
+
+            <div class="tasks-section">
+                <div class="tasks-header">
+                    <h2 style="color: #333">Your Tasks</h2>
+                    <span class="task-count" id="taskCount">0 tasks</span>
+                </div>
+                <div id="tasksList">
+                    <div class="no-tasks">Loading tasks...</div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./app.js"></script>
+    </body>
+</html>
