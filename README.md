@@ -101,4 +101,4 @@ The application provides the following REST API endpoints:
 | PUT    | `/api/tasks/:id` | Update an existing task          |
 | DELETE | `/api/tasks/:id` | Delete a task                    |
 
-Happy coding! 🚀
+> you can try out these endpoints with curl command
